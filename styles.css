@@ -1,0 +1,109 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    margin: 0;
+    padding: 0;
+}
+
+.form-control{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 100px 15px;
+    margin: auto;
+    padding: 30px;
+}
+
+.input-container{
+    /*display: grid;
+    grid-template-columns: max-content 1fr;*/
+    display: flex;
+    margin-left: 30px;
+}
+
+.day-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.month-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.year-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#day{
+    font-size: 32px;
+    width: 100px;
+}
+
+#month{
+    font-size: 32px;
+    height: 43px;
+    width: 100px;
+}
+
+#year{
+    font-size: 32px;
+    width: 100px;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container, .result-container{
+    margin: 20px 0;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.purple{
+    color: hsl(259, 100%, 65%);
+}
+
+.submit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.separator{
+    flex: 1;
+    border: 1px solid hsl(0, 0%, 80%);
+    height: 0;
+    width: 60%;
+    margin-left: 30px;
+}
+
+.img{
+    width: 55px;
+    height: 55px;
+    margin-left: 0;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover{
+    background-color: hsl(0, 0%, 8%);
+}
