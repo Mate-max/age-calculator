@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+    <title>Frontend Mentor | Age calculator app</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Frontend Mentor | Age calculator app</title>
-</head>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main id="app">
+      <div id="input-container">
+        <div class="input-section">
+          <h1 id="label-day" class="label">day</h1>
+          <input
+            id="input-day"
+            class="input-box"
+            type="text"
+            minlength="1"
+            maxlength="2"
+            name="day"
+            onblur="updateDay()"
+          />
+          <br />
+          <span id="day-error" class="error-box" ></span>
+        </div>
+        <div class="input-section">
+          <h1 id="label-month" class="label">month</h1>
+          <input
+            id="input-month"
+            class="input-box"
+            type="text"
+            minlength="1"
+            maxlength="2"
+            name="month"
+            onblur="updateMonth()"
 
-<body>
-  <div class="form-control">
-    <div class="input-container">
+          />
+          <br />
 
-      <!-- Start day input -->
-      <div class="day-container">
-        <label for="day" style="color: hsl(0, 1%, 44%);">Day</label>
-        <input type="number" id="day" name="day" min="1" max="31" required placeholder="DD" />
+          <span id="month-error" class="error-box"></span>
+        </div>
+        <div class="input-section">
+          <h1 id="label-year" class="label">year</h1>
+          <input
+            id="input-year"
+            class="input-box"
+            type="text"
+            minlength="4"
+            maxlength="4"
+            name="year"
+            onblur="updateYear()"
+
+          />
+          <br />
+
+          <span id="year-error" class="error-box"></span>
+        </div>
       </div>
-      <!-- End day input -->
-
-      <!-- Start month input -->
-      <div class="month-container">
-        <label for="Month" style="color: hsl(0, 1%, 44%);"> Month </label>
-        <select id="month" name="month" style="color: hsl(0, 1%, 44%);" required>
-          <option value="0" selected>MM</option>
-          <option value="1">January</option>
-          <option value="2">February</option>
-          <option value="3">March</option>
-          <option value="4">April</option>
-          <option value="5">May</option>
-          <option value="6">June</option>
-          <option value="7">July</option>
-          <option value="8">August</option>
-          <option value="9">September</option>
-          <option value="10">October</option>
-          <option value="11">November</option>
-          <option value="12">December</option>
-        </select>
+      <div id="horizontal-line">
+        <hr />
+        <div id="svg-arrow" onclick="ageCalculate()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="44"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
-      <!-- End month input -->
-
-      <!-- Start year input -->
-      <div class="year-container">
-        <label for="year" style="color: hsl(0, 1%, 44%);">Year</label>
-        <input type="number" id="year" name="year" min="1900" max="2100" placeholder="YYYY" required>
+      <div id="output-conatiner">
+        <h1 class="output-text"><span id="years-output">- -</span>years</h1>
+        <h1 class="output-text"><span id="months-output">- -</span>months</h1>
+        <h1 class="output-text"><span id="days-output">- -</span>days</h1>
       </div>
-      <!-- End year input -->
-      
-      <!-- Start result container -->
-    </div>
-
-    <!--Line and icon-->
-    <div class="submit">
-      <hr class="separator"/>
-     <button class="btn" onclick="calculateAge()"><img src="./assets/images/icon.png" alt="icon-arrow" class="img" /></button>
-    </div>
-
-    <div class="ageResult">
-      <h1><span class="purple"> -- </span> years</h1>
-      <h1><span class="purple"> -- </span> months</h1>
-      <h1><span class="purple"> -- </span> days </h1>
-    </div>
-    <!-- End result container -->
-  </div>
-</body>
-
+    </main>
+  </body>
 </html>
