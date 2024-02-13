@@ -150,13 +150,16 @@ input::-webkit-inner-spin-button {
   
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   
   body{
-      background-color: aquamarine;
-      
+      background-color: hsl(0, 0%, 100%);
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+      min-width: 90%;
   }
-  #card{
+  #app{
       margin :0;
       padding: 1rem;
       width: 80%;
